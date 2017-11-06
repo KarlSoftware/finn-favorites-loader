@@ -1,6 +1,5 @@
 # Finn Favorites Loader - Chrome Extension
 
-## Description
 A simple extension that enables lazy loading for Finn.no favorites page to avoid their useless pagination.
 
 ## Installation
