@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2,
+	"name": "Finn Favorites - Lazyloader",
+	"version": "0.1",
+	"content_scripts" : [
+		{    
+			"matches" : [
+				"https://www.finn.no/user/favorite/favorites.html*"
+			],
+			"js" : [
+				"jquery-3.2.1.min.js",
+				"content.js"
+			]
+		}
+	],
+	"browser_action" : {
+		"default_icon" : "finn-icon.png",
+		"default_title" : "Finn Favorites Lazyloader"
+	}
+}
