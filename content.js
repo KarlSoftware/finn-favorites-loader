@@ -1,9 +1,5 @@
 (function ($, undefined) {
-    console.info('outer init');
-
     $(function () {
-        console.info('inner init');
-
         var pathName = window.location.href;
 
         var numOfPages = $('.hidelt768 a:last-child').text();
