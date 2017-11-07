@@ -1,5 +1,6 @@
 $(document).ready(function() {
     var pathName = window.location.href;
+    pathName = pathName.replace('&page=1', '');
 
     // Gets the content of the last child in "pagination". Might be a better way to find the last page, but this works for now.
     var numOfPages = $('.hidelt768 a:last-child').text();
@@ -28,14 +29,14 @@ $(document).ready(function() {
         $(window).scroll(function() {
             if($(this).scrollTop() >= (divHeight - wHeight) && !pause && pageArr.length) {
                 // Splice next page from array.
-                var nextPage = pageArr.splice(0,1);
+                var nextPage = pageArr.splice(0,1)[0];
                 // Pause scrolling. 
                 pause = true;
                 console.log(nextPage);
 
                 // Generate URL for the page we want to fetch content from.
-                var url = pathName + ("&page=" + nextPage);
-
+                var url = pathName + ('&page=' + nextPage);
+                console.log(url);
                 // Run a GET method for next page
                 $.get(url, function(data) {
                     var content = $(data).find('div.listing > div.inner > div.bd');
