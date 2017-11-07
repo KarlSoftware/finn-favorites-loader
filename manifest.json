@@ -10,7 +10,8 @@
 			"js" : [
 				"jquery-3.2.1.min.js",
 				"content.js"
-			]
+			],
+			"run_at" : "document_end"
 		}
 	],
 	"browser_action" : {
