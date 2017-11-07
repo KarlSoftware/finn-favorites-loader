@@ -14,7 +14,6 @@ if (numOfPages > 1) {
     for (var i = 2; i <= numOfPages; i++) {
         pageArr.push(i);
     }
-    console.log(pageArr);
 
     // Save the listing div. 
     var listDiv = $('div.listing > div.inner > div.bd');
@@ -31,11 +30,10 @@ if (numOfPages > 1) {
             var nextPage = pageArr.splice(0,1)[0];
             // Pause scrolling. 
             pause = true;
-            console.log(nextPage);
 
             // Generate URL for the page we want to fetch content from.
             var url = pathName + ('&page=' + nextPage);
-            console.log(url);
+
             // Run a GET method for next page
             $.get(url, function(data) {
                 var content = $(data).find('div.listing > div.inner > div.bd');
